@@ -1,2 +1,1 @@
-# noteTakr
- 
+# Note Taker Starter Code
