@@ -39,6 +39,10 @@ fetch('/api/notes', {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
+  }).then(response => {
+    if (response.ok) {
+      return response.json();
+    };
   });
 
 const deleteNote = (id) =>
