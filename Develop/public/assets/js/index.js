@@ -1,20 +1,25 @@
 let noteTitle;
 let noteText;
-let saveNoteBtn;
+let saveNoteBtn = document.querySelector('.save-note');
 let newNoteBtn;
 let noteList;
 
-if (window.location.pathname === '/notes') {
+if (window.location.pathname === '/notes.html') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
-  saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
 // Show an element
 const show = (elem) => {
+  console.log(elem);
   elem.style.display = 'inline';
+};
+
+const saveShow =() =>{
+  console.log(saveNoteBtn);
+  show(saveNoteBtn);
 };
 
 // Hide an element
