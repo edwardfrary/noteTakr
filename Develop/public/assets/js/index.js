@@ -17,11 +17,6 @@ const show = (elem) => {
   elem.style.display = 'inline';
 };
 
-const saveShow =() =>{
-  console.log(saveNoteBtn);
-  show(saveNoteBtn);
-};
-
 // Hide an element
 const hide = (elem) => {
   elem.style.display = 'none';
