@@ -1,15 +1,14 @@
-let noteTitle;
-let noteText;
+let noteTitle = document.querySelector('.note-title');
+let noteText = document.querySelector('.note-textarea');
 let saveNoteBtn = document.querySelector('.save-note');
 let newNoteBtn;
 let noteList;
 
 if (window.location.pathname === '/notes.html') {
-  noteTitle = document.querySelector('.note-title');
-  noteText = document.querySelector('.note-textarea');
   newNoteBtn = document.querySelector('.new-note');
   noteList = document.querySelectorAll('.list-container .list-group');
 }
+
 
 // Show an element
 const show = (elem) => {
@@ -32,18 +31,22 @@ const getNotes = () =>
     },
   });
 
-const saveNote = (note) =>
-fetch('/api/notes', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(note),
-  }).then(response => {
-    if (response.ok) {
-      return response.json();
-    };
-  });
+const saveNote = () => {
+  let title = noteTitle.value;
+  let text = noteText.value
+  const noteObj = {title, text};
+    fetch('/api/notes', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(noteObj),
+    }).then(response => {
+      if (response.ok) {
+        return response.json();
+      };
+    });
+};
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {

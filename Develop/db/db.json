@@ -1,10 +1,14 @@
-    [
-        {
-            "title": "Test Title",
-            "text": "Test text"
-        },
-        {
-            "title": "Test Title",
-            "text": "Test text"
-        }
-    ]
+{
+  "notesArray": [
+    {
+      "title": "Test Title",
+      "text": "Test text",
+      "id": 0
+    },
+    {
+      "title": "Test Title",
+      "text": "Test text",
+      "id": 1
+    }
+  ]
+}
