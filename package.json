@@ -1,0 +1,29 @@
+{
+  "name": "notetakr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^27.0.5",
+    "node": "^16.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edwardfrary/noteTakr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edwardfrary/noteTakr/issues"
+  },
+  "homepage": "https://github.com/edwardfrary/noteTakr#readme"
+}
